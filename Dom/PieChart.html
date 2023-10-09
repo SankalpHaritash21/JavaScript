@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Composition Pie Chart</title>
+    <!-- Include Plotly.js from CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="pie-chart"></div>
+
+    <script>
+      // Composition of air (approximate percentages)
+      const airComposition = [
+        { gas: "Nitrogen", percentage: 78 },
+        { gas: "Oxygen", percentage: 20 },
+        { gas: "carbon dioxide", percentages: 1 },
+        // Add more gases and percentages if needed
+      ];
+
+      // Extract data for the pie chart
+      const gases = airComposition.map((item) => item.gas);
+      const percentages = airComposition.map((item) => item.percentage);
+
+      // Create a pie chart
+      const data = [
+        {
+          values: percentages,
+          labels: gases,
+          type: "pie",
+          textinfo: "percent+label",
+          automargin: true,
+        },
+      ];
+
+      const layout = {
+        title: "Composition of Air (Pie Chart)",
+      };
+
+      Plotly.newPlot("pie-chart", data, layout);
+    </script>
+  </body>
+</html>

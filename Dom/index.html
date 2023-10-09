@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 43.5rem;
+    "
+  >
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse Over Me
+    </div>
+
+    <script>
+      function mOver(obj) {
+        obj.innerHTML = "Thank You";
+      }
+
+      function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me";
+      }
+    </script>
+  </body>
+</html>

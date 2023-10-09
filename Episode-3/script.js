@@ -46,7 +46,7 @@ console.log(Array.isArray(z));
 const marvel_heros = ["thor", "Ironman", "spiderman"];
 const dc_heros = ["superman", "flash", "batman"];
 
-// marvel_heros.push(dc_heros)
+// marvel_heros.push(dc_heros)- Not a good way to cancat two array
 
 // console.log(marvel_heros);
 // console.log(marvel_heros[3][1]);
@@ -54,9 +54,9 @@ const dc_heros = ["superman", "flash", "batman"];
 // const allHeros = marvel_heros.concat(dc_heros)
 // console.log(allHeros);
 
+//Using spread operator(...)
 const all_new_heros = [...marvel_heros, ...dc_heros];
-
-// console.log(all_new_heros);
+console.log(all_new_heros);
 
 const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 
@@ -92,6 +92,8 @@ const JsUser = {
   isLoggedIn: false,
   lastLoginDays: ["Monday", "Saturday"],
 };
+
+//Way of accessing Object
 
 // console.log(JsUser.email)
 // console.log(JsUser["email"])
@@ -186,5 +188,5 @@ console.log(instructor);
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
-
+//Api cani be in form of Array's and object to......
 [{}, {}, {}];

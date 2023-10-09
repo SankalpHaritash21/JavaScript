@@ -1,11 +1,70 @@
 /**********************************Functions***************************/
+/*
+What is a Function ?
+A Function is a block of code that is designed to perform a task and executed when it is been called or invoked.
+
+There are 3 ways of writing a function in JavaScript:
+1. Function Declaration
+2. Function Expression
+3. Arrow Function
+
+Function Declaration: Function Declaration is the traditional way to define a function. It is somehow similar to the way we define a function in other programming languages. We start declaring using the keyword “function”. Then we write the function name and the parameters.
+
+Example: Below is an example that illustrates the use of Function Declaration.
+
+
+ 
+    function add(a, b) {          - declaration
+        console.log(a + b); 
+    } 
+      
+
+    add(2, 3); - call function
+After defining a function, we call it whenever the function is required.
+
+Output:
+
+5
+Function Expression: Function Expression is another way to define a function in JavaScript. Here we define a function using a variable and store the returned value in that variable.
+
+Example: Below is an example that illustrates the use of Function Expression.
+
+
+    const add = function(a, b) { 
+        console.log(a+b); 
+    }  
+      
+
+    add(2, 3); 
+ Here, the whole function is an expression and the returned value is stored in the variable. We use the variable name to call the function.
+
+Output:
+
+5
+Arrow Functions: Arrow functions are been introduced in the ES6 version of JavaScript. It is used to shorten the code. Here we do not use the “function” keyword and use the arrow symbol.
+
+Example: Below is the example that illustrates the use of the Arrow Function.
+
+ Single line of code 
+    let add = (a, b) => a + b;  
+      
+    console.log(add(3, 2)); 
+This shortens the code to a single line compared to other approaches. In a single line of code, the function returns implicitly.
+
+Output:
+
+5
+
+*/
+
 function sayMyName() {
-  console.log("H");
-  console.log("I");
-  console.log("T");
-  console.log("E");
   console.log("S");
-  console.log("H");
+  console.log("A");
+  console.log("N");
+  console.log("K");
+  console.log("A");
+  console.log("L");
+  console.log("P");
 }
 
 // sayMyName()
@@ -33,8 +92,7 @@ function loginUserMessage(username = "sam") {
   return `${username} just logged in`;
 }
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
+// console.log(loginUserMessage("Sankalp"))
 
 function calculateCartPrice(val1, val2, ...num1) {
   return num1;
@@ -43,7 +101,7 @@ function calculateCartPrice(val1, val2, ...num1) {
 // console.log(calculateCartPrice(200, 400, 500, 2000))
 
 const user = {
-  username: "hitesh",
+  username: "Sankalp",
   prices: 199,
 };
 
@@ -82,7 +140,7 @@ if (true) {
 // console.log(c);
 
 function one() {
-  const username = "hitesh";
+  const username = "Sankalp";
 
   function two() {
     const website = "youtube";
@@ -96,8 +154,8 @@ function one() {
 // one()
 
 if (true) {
-  const username = "hitesh";
-  if (username === "hitesh") {
+  const username = "Sankalp";
+  if (username === "Sankalp") {
     const website = " youtube";
     // console.log(username + website);
   }
@@ -164,7 +222,7 @@ const chai = () => {
 
 // const addTwo = (num1, num2) => ( num1 + num2 )
 
-const addTwo1 = (num1, num2) => ({ username: "hitesh" });
+const addTwo1 = (num1, num2) => ({ username: "Sankalp" });
 
 console.log(addTwo1(3, 4))(
   // const myArray = [2, 5, 3, 7, 8]
