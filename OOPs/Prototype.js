@@ -14,18 +14,18 @@ let heroPower = {
   },
 };
 
-Object.prototype.hitesh = function () {
-  console.log(`hitesh is present in all objects`);
+Object.prototype.Sam = function () {
+  console.log(`Sam is present in all objects`);
 };
 
-Array.prototype.heyHitesh = function () {
-  console.log(`Hitesh says hello`);
+Array.prototype.heySam = function () {
+  console.log(`Sam says hello`);
 };
 
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+// heroPower.Sam()
+// myHeros.Sam()
+// myHeros.heySam()
+// heroPower.heySam()
 
 // inheritance
 
@@ -61,5 +61,5 @@ String.prototype.trueLength = function () {
 };
 
 anotherUsername.trueLength();
-"hitesh".trueLength();
+"Sankalp".trueLength();
 "iceTea".trueLength();
