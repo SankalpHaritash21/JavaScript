@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bublling</title>
+    <style>
+      div {
+        background-color: blueviolet;
+        height: 200px;
+        width: 400px;
+      }
+
+      ul {
+        background-color: yellow;
+      }
+
+      li {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </div>
+    <script>
+      let div = document.querySelector("div");
+      let ul = document.querySelector("ul");
+      let lis = document.querySelectorAll("li");
+
+      div.addEventListener("click", () => {
+        alert("div was clicked");
+      });
+
+      ul.addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("ul was clicked");
+      });
+      for (li of lis) {
+        li.addEventListener("click", (e) => {
+          e.stopPropagation();
+          alert("li was clicked");
+        });
+      }
+    </script>
+  </body>
+</html>

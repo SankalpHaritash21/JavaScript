@@ -1,0 +1,60 @@
+// Using Event Bubbling and event deligation
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Task Manager</h1>
+    <input placeholder="Enter ur Task" />
+    <button>Add Task</button>
+
+    <ul>
+      <li>Eat <button class="delete">Delete</button></li>
+      <li>Sleep <button class="delete">Delete</button></li>
+    </ul>
+
+    <script>
+      let btn = document.querySelector("button");
+      let input = document.querySelector("input");
+      let ul = document.querySelector("ul");
+
+      btn.addEventListener("click", () => {
+        let item = document.createElement("li");
+        let delBtn = document.createElement("button");
+        delBtn.innerHTML = "delete";
+        delBtn.classList.add("delete");
+        item.innerHTML = input.value;
+        // delBtn.addEventListener("click", () => {
+        //   let p = delBtn.parentElement;
+        //   p.remove();
+        // });
+
+        item.appendChild(delBtn);
+        ul.appendChild(item);
+        input.value = "";
+      });
+
+      ul.addEventListener("click", function (e) {
+        //alert("hi");
+        if (e.target.nodeName === "BUTTON") {
+          //console.log("delete");
+          let listItem = e.target.parentElement;
+          listItem.remove();
+        }
+      });
+
+      ///let dBtn = document.querySelectorAll(".delete");
+      //for (d of dBtn) {
+      // d.addEventListener("click", function () {
+      //  let p = this.parentElement;
+      //  p.remove();
+      // });
+      //  }
+    </script>
+  </body>
+</html>
