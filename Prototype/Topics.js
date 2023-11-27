@@ -53,12 +53,13 @@ output: error
 
 //--closure
 const x = () => {
+  var z = 12;
   return function y() {
-    return "hi";
+    console.log(z);
   };
 };
 
 console.log(x);
 console.log(x());
 let z = x();
-console.log(z());
+z();
