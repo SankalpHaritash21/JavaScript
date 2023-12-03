@@ -11,7 +11,7 @@ let h2 = document.querySelector("h2");
 let hS = document.querySelector(".hs");
 let cS = document.querySelector(".cs");
 
-document.addEventListener("keypress", () => {
+document.addEventListener("touchstart", () => {
   if (!Started) {
     Started = true;
     console.log("game started");
