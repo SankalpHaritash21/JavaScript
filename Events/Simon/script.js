@@ -11,13 +11,16 @@ let h2 = document.querySelector("h2");
 let hS = document.querySelector(".hs");
 let cS = document.querySelector(".cs");
 
-document.addEventListener("touchstart", () => {
+document.addEventListener("mousedown", handleStart);
+document.addEventListener("touchstart", handleStart);
+
+function handleStart() {
   if (!Started) {
     Started = true;
     console.log("game started");
     levelUp();
   }
-});
+}
 
 function levelUp() {
   userSeq = [];
