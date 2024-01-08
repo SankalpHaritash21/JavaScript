@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .button {
+    @apply border border-black my-3 mx-4 w-10 h-10 flex items-center justify-center cursor-pointer;
+  }
+}
