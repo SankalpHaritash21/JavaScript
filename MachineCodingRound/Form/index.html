@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Create Account</h3>
+
+      <form
+        action=""
+        class="signup"
+        id="cnform"
+        method="post"
+        data-parsley-validate
+      >
+        <input
+          name="name"
+          id="name"
+          placeholder="Enter Full Name"
+          required
+          data-parsley-required-message="Name is required"
+        />
+        <input
+          name="email"
+          id="email"
+          placeholder="Enter Email ID"
+          required
+          data-parsley-required-message="Email is required"
+          data-parsley-type="email"
+          data-parsley-type-message="Enter a valid email address"
+        />
+        <input
+          name="password"
+          id="password"
+          placeholder="Create Password"
+          required
+          data-parsley-required-message="Password is required"
+          data-parsley-minlength="12"
+          data-parsley-minlength-message="Password must be at least 12 characters"
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#cnform").parsley();
+      });
+    </script>
+    /*What is Parsley.js? Parsley.js is a JavaScript library for form
+    validation. It is used in web applications to ensure the data entered in a
+    form is in the correct format. It can be used to set various criteria and
+    ensure the data is accurate and meets the requirements set by the developer.
+    Parsley.js provides a set of built-in validation rules that can be applied
+    to any input fields like email, passwords, checkbox, date, etc. These
+    validation rules are backed by a set of error messages that are used to
+    inform the user about any mistakes while filling out the form. */
+  </body>
+</html>
