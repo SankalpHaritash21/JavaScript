@@ -1,3 +1,5 @@
+// Note: Custom POP
+
 const g = ["a", "b", "c", "d"];
 
 console.log(g);
